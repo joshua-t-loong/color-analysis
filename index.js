@@ -7,15 +7,21 @@ var options = {
   delimiter : ',' // optional
 };
 var dataset = csvjson.toObject(data, options);
+var colors = {};
 
 for (var i = 0; i < dataset.length; i++){
-  console.log(dataset[i].file);
   var v = new Vibrant('img/' + dataset[i].file)
   v.getPalette(function(e, s) {
   if (e) {
     console.log(e)
   } else {
-    console.log(JSON.stringify(s, null, 2))
+
+    colors = JSON.stringify(s, null, 2);
+    for (var i = 0; i < dataset.length; i++){
+      console.log(dataset[i].file);
+      console.log(colors[i] +"\n");
+
+    }
   }
 })
 }

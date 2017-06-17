@@ -6,6 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/joshua-t-loong/color-analysis"
+  },
+  "dependencies":
+  {
+    "csvjson": "^4.3.3",  
+    "node-vibrant": "^3.0.0-alpha.2"
+  },
   "author": "joshua.t.loong",
   "license": "ISC"
 }
