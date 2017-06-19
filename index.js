@@ -28,6 +28,8 @@ setTimeout(loadData, 10000, colorsArray);
 
 function loadData (colors)
 {
+  console.log("Name: Blah" + colors[0]);
+
   fs.writeFile("./colors.json", colors, function(err) {
     if(err) {
      return console.log(err);
